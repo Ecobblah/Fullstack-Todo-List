@@ -1,0 +1,29 @@
+.inner-container {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .example-container > * {
+    width: 50%;
+  }
+  .container {
+      display: flex;
+      justify-content: center;
+      align-items:center;
+      height: 30rem;
+  }
+  .flex-item{
+    flex-basis: 40%;
+    display: flex;
+    justify-content: center;
+  }
+  mat-card-title.mat-card-title{
+      font-size: 36px;
+  }
+  .form-width{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 70%;
+   }

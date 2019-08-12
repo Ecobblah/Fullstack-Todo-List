@@ -1,0 +1,33 @@
+<div class="container">
+    <mat-card class="flex-item">
+        <div class="form-width">
+            <mat-card-header>
+                    <mat-card-title>
+                        Login Form
+                    </mat-card-title>
+            </mat-card-header>
+            <form [formGroup]="userForm">
+                <div class="inner-container">
+                    <mat-form-field>
+                        <input formControlName="username" matInput placeholder="Username">
+                        <mat-error *ngIf="userForm.controls['username'].hasError('required')">
+                            username <strong>required</strong>
+                        </mat-error>
+                    </mat-form-field>
+                    <mat-form-field>
+                        <input formControlName="password" type="password" matInput placeholder="Password">
+                        <mat-error *ngIf="userForm.controls['password'].hasError('required')">
+                            password <strong>required</strong>
+                        </mat-error>
+                    </mat-form-field>
+                </div>
+            </form>
+            <mat-card-actions>
+                <button (click)="onSubmit()" mat-raised-button>Login</button>
+                <button (click)="onSignUp()" mat-raised-button color="primary">Sign Up</button>
+            </mat-card-actions>
+        </div>
+    </mat-card>
+</div>
+
+

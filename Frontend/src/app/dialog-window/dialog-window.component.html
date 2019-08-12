@@ -1,0 +1,15 @@
+  <div class="container">
+      <h1 mat-dialog-title>Todo id:  {{data.i.id}}</h1>
+      <div mat-dialog-content>
+        <p>User: {{data.i.userName}}</p>
+        <p>Done: {{data.i.checked}}</p>
+        <mat-form-field>
+          <textarea class="text" matInput [(ngModel)]="data.i.desc" ></textarea>
+        </mat-form-field>
+      </div>
+      <div mat-dialog-actions>
+        <button mat-button [mat-dialog-close]="null" (click)="onNoClick()">Cancel</button>
+        <button mat-button [mat-dialog-close]="data.i" cdkFocusInitial>Update</button>
+      </div>
+  </div>
+  

@@ -1,0 +1,26 @@
+<div class="space-y"></div>
+<app-todo-input></app-todo-input>
+<div class="list-container">
+    <mat-card  *ngIf="true">
+            <!-- list.length !==0 -->
+        <mat-list>
+            <mat-list-item *ngFor="let todo of list" class="innerClass">
+                    <div (click)="onClick(todo)" [ngClass]="{'marked':todo.checked,'item-streach':true}">
+                            {{ todo.desc }}
+                    </div >
+                    <button mat-icon-button (click)="handleDelete(todo.id)" color="warn" aria-label="Example icon-button with a heart icon">
+                            <mat-icon>clear</mat-icon>
+                    </button>
+                    <button mat-icon-button (click)="openDialog(todo)" color="primary" aria-label="Example icon-button with a heart icon">
+                            <mat-icon>add</mat-icon>
+                    </button>
+                    <mat-divider></mat-divider>
+            </mat-list-item>
+        </mat-list>
+        
+    </mat-card>
+</div>
+
+
+
+

@@ -1,0 +1,15 @@
+<header>
+    <mat-toolbar [class.mat-elevation-z6]="true" color='primary' id="nav-bar">
+        <span>Todo List</span>
+        <span *ngIf="userName!==null"> Welcome {{userName}}</span>
+        <span class="example-fill-remaining-space"></span>
+        <button mat-button [matMenuTriggerFor]="menu">Menu</button>
+        <mat-menu #menu="matMenu">
+            <a (click)="logout()" mat-menu-item>Logout</a>
+            <a mat-menu-item href="http://localhost:8090/swagger-ui.html#/" target="_blank">Api</a>
+            <a mat-menu-item href="http://localhost:8090/h2-console/login.jsp?jsessionid=a49b61a8059c5d88e0c8953d73a9d4d1" target="_blank">H2 Database</a>
+        </mat-menu>
+    </mat-toolbar>
+</header>
+
+

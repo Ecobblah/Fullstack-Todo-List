@@ -1,0 +1,32 @@
+.list-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+mat-card{
+    width: 50%
+}
+
+.marked{
+    text-decoration: line-through;
+}
+a{
+    display: inline;
+    
+}
+
+.innerClass{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.item-streach{
+    flex:1;
+}
+
+.space-y{
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
